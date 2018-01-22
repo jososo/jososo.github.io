@@ -539,7 +539,8 @@ img::-moz-selection {
   .panel-cover__logo {
     margin-bottom: .2em; }
 
-  
+  .panel-cover__description {
+    margin: 0 30px; }
 
   .panel-cover__divider {
     width: 50%;
@@ -860,7 +861,7 @@ img::-moz-selection {
     color: #000000; 
     background-color: #FAFAFA;
   }
-  }
+}
 
 .post-list__meta {
   display: block;
@@ -1056,7 +1057,10 @@ input[type="tel"]:-ms-input-placeholder {
   .panel-subtitle {
     font-size: 0.6em; }
 
-
+  .panel-cover__description {
+    margin: 0 10px;
+    font-size: .9em; }
+}
 @media all and (max-width: 1100px) {
   .btn-mobile-menu {
     display: block; 
@@ -1076,7 +1080,11 @@ input[type="tel"]:-ms-input-placeholder {
     padding: 60px 10%; 
   }
 
-  
+  .panel-cover__description {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto; 
+  }
 
   .panel-cover__divider--secondary {
     display: none; 
