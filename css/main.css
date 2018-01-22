@@ -540,7 +540,7 @@ img::-moz-selection {
     margin-bottom: .2em; }
 
   .panel-cover__description {
-    margin: 0 30px; }
+    margin: 0 50px; }
 
   .panel-cover__divider {
     width: 50%;
@@ -861,7 +861,7 @@ img::-moz-selection {
     color: #000000; 
     background-color: #FAFAFA;
   }
-}
+  }
 
 .post-list__meta {
   display: block;
@@ -1058,7 +1058,7 @@ input[type="tel"]:-ms-input-placeholder {
     font-size: 0.6em; }
 
   .panel-cover__description {
-    margin: 0 30px;
+    margin: 0 10px;
     font-size: .9em; }
 }
 @media all and (max-width: 1100px) {
@@ -1082,7 +1082,7 @@ input[type="tel"]:-ms-input-placeholder {
 
   .panel-cover__description {
     display: block;
-    max-width: 600px;
+    max-width: 6000px;
     margin: 0 auto; 
   }
 
