@@ -1,0 +1,139 @@
+# mariadb 入门
+
+## 安装
+
+    apt-get install mariadb-server python-pymysql 
+ 
+改密码
+
+    mysqladmin -uroot -p password yourpassword
+
+进入MariaDB
+
+    mysql -uroot -p 
+    
+MariaDB 服务启动与停止
+```
+sudo /etc/init.d/mysql stop
+sudo /etc/init.d/mysql start
+```
+## 使用
+**连接（使用）数据库**
+
+    use [databasename];
+**创建表**
+```
+create table [tablename](<列名1> <数据类型1> [约束条件1]，...，<列名n> <类型n>[约束条件n]);
+
+eg.
+mysql> create table MyClass(
+> id int(4) not null primary key auto_increment,
+> name char(20) not null,
+> sex int(4) not null default '0',
+> degree double(16,2));
+```
+建立一个名为MyClass的表
+|列名  |数据 |	数据宽度| 	是否为空| 	是否主键| 	自动增加 |	默认值|
+| --------   | -----:  | :----:  |
+|id 	|int |	4 |	否 |	primary key |	auto_increment 	 
+|name 	|char |	20 |	否 	  	  	 
+|sex 	|int |	4 |	否 |	||  	  	0
+|degree |	double 	|16 	|是 	  	  	 
+**删除表**
+
+    drop table [tablename]
+
+DROP TABLE用于取消一个或多个表。您必须有每个表的DROP权限。所有的表数据和表定义会被取消，所以使用本语句要小心！
+
+注意：对于一个带分区的表，DROP TABLE会永久性地取消表定义，取消各分区，并取消储存在这些分区中的所有数据。DROP TABLE还会取消与被取消的表有关联的分区定义（.par）文件。
+
+**往表中插入数据**
+```
+insert into [表名] ( <字段名1>,...,<字段名n > ) values ( 值1 ),...,( 值n )
+eg:
+insert into ss(id,name) values (23,"a"),(24,"b");
+```
+**查询表中数据**
+
+```
+select <字段1，字段2，...> from < 表名 > where < 表达式 >
+
+eg.
+查看表 MyClass 中所有数据
+mysql> select * from MyClass;
+```
+
+**删除表中数据**
+```
+delete from 表名 where 表达式
+
+eg.
+delete from ssd where id like '1%';
+```
+%：[通配符][1]
+
+**更新表中数据**
+
+```
+update 表名 set 字段=新值,… where 条件
+
+eg.
+update ssf set id="101" where id=100;
+
+```
+例子1：单表的MySQL UPDATE语句：
+   UPDATE [LOW_PRIORITY] [IGNORE] tbl_name SET col_name1=expr1 [, col_name2=expr2 ...] [WHERE where_definition] [ORDER BY ...] [LIMIT row_count]
+
+例子2：多表的UPDATE语句：
+UPDATE [LOW_PRIORITY] [IGNORE] table_references SET col_name1=expr1 [, col_name2=expr2 ...] [WHERE where_definition]
+
+UPDATE语法可以用新值更新原有表行中的各列。SET子句指示要修改哪些列和要给予哪些值。WHERE子句指定应更新哪些行。如果没有WHERE子句，则更新所有的行。如果指定了ORDER BY子句，则按照被指定的顺序对行进行更新。LIMIT子句用于给定一个限值，限制可以被更新的行的数目。
+
+**查询所有表**
+
+    show tables
+
+连接远程服务器上的数据库
+
+    mysql -h[ip] -u[user] -p[password]
+ip处填服务器IP，填localhost就连接到本机服务器
+##MySQLAdmin用法
+语法 `mysqladmin -u[username] -p[password] option`
+ps:如果-p后面没输入password会在回车后让你输入password
+**option列表**
+```
+create databasename             创建一个新数据库
+drop databasename               删除一个数据库及其所有表
+extended-status                 给出服务器的一个扩展状态消息
+flush-hosts                     洗掉所有缓存的主机
+flush-logs                      洗掉所有日志 
+flush-tables                    洗掉所有表 
+flush-privileges                再次装载授权表(同reload) 
+kill id,id,...                  杀死mysql线程 
+password                        新口令，将老口令改为新口令
+ping                            检查mysqld是否活着 
+processlist                     显示服务其中活跃线程列表
+reload                          重载授权表 
+refresh                         洗掉所有表并关闭和打开日志文件
+shutdown                        关掉服务器 
+status                          给出服务器的简短状态消息
+variables                       打印出可用变量
+version                         得到服务器的版本信息
+```
+
+http://www.cnblogs.com/qq78292959/p/3639384.html
+https://dev.mysql.com/doc/refman/5.7/en/mysqladmin.html
+http://auskangaroo.blog.51cto.com/740826/577687
+http://www.mamicode.com/info-detail-514369.html
+http://blog.csdn.net/ghost_leader/article/details/53366942
+http://daisywei.blog.51cto.com/7837970/1710705
+
+
+
+链接：
+
+ 1. [ubuntu mariadb安装][2]
+
+
+  [1]: https://baike.baidu.com/item/SQL%20%E9%80%9A%E9%85%8D%E7%AC%A6/911590?fr=aladdin
+  [2]: http://blog.csdn.net/zhaihaifei/article/details/51659134

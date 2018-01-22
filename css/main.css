@@ -248,7 +248,7 @@ td:last-child {
 /*pager start----------------*/
 .post-container 
 .pager li{ 
-  margin-top: 20px;
+  margin-top: 40px;
   width:48%
 }
 .next{
