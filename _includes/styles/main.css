@@ -43,7 +43,7 @@ color: #fff;
     text-transform: uppercase;
 position: relative;
     letter-spacing: 2px;
-    font-size: 44px;
+    font-size: 22px;
 margin: 0 30px;
 padding: 55px 0 0 0;
 height: 110px;
@@ -55,7 +55,7 @@ color: #bbb;
 padding: 10px 5px;
     font-style: italic;
 margin: 0 30px;
-    font-size: 60px;
+    font-size: 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
