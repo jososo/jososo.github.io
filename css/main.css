@@ -582,7 +582,7 @@ img::-moz-selection {
 
   .cover-navigation {
     margin-top: 0px; 
-    width: 200%;
+    width: 100%;
   }
   .cover-blue {
     background-color: rgba(37, 104, 163, 0.6);
@@ -729,7 +729,7 @@ img::-moz-selection {
   .navigation__item a {
     display: inline-block;
     position: relative;
-    width: 100%;
+    width: 200%;
     border-color: #666;
     color: #666;
     /*opacity: .8; */
