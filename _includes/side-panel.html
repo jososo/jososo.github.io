@@ -42,9 +42,9 @@
           <div>
             <nav class="cover-navigation cover-navigation--primary">
               <ul class="navigation">
-                <li class="navigation__item"><a href="/#blog" title="{{site.blog_button.description}}" class="blog-button">{{site.blog_button.title}}</a></li>
+                <p class="navigation__item"><a href="/#blog" title="{{site.blog_button.description}}" class="blog-button">{{site.blog_button.title}}</a></p>
                 {% for item in site.nav %}
-                  <li class="navigation__item"><a href="{{item.url}}" title="{{item.description}}">{{item.title}}</a></li>
+                  <p class="navigation__item"><a href="{{item.url}}" title="{{item.description}}">{{item.title}}</a></p>
                 {% endfor %}
               </ul>
             </nav>
