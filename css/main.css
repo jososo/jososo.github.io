@@ -498,13 +498,13 @@ img::-moz-selection {
   .panel-title {
     margin: 0 0 5px 0;
     margin-top: 20px;
-    font-size: 1.8em;
+    font-size: 5em;
     letter-spacing: 4px;
     color: #FFF; }
 
   .panel-subtitle {
     font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-    font-size: 0.6em;
+    font-size: 2em;
     font-weight: lighter;
     letter-spacing: 3px;
     color: #CCCCCC;
