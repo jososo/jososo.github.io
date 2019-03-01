@@ -7,10 +7,7 @@ description: vimperator
 keywords: 插件
 ---
 
-﻿# vimperator常用命令
-
-标签（空格分隔）： 奇怪软件
-
+## 命令
 ```
 :q         --退出
 :wq        --退出and save tab
@@ -20,7 +17,8 @@ keywords: 插件
 :bmark     --添加入收藏夹
 :qmark     --打开书签
 ```
-按键
+
+## 按键
 ```
 /         非ignore下输入查找关键字
 n         /之后esc按n能找到下一个关键字
@@ -45,7 +43,7 @@ gg        查看当前打开网页的最上面部分
 
 
 ```
-在此输入正文
+
 
 
 
